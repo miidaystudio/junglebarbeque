@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --jb-bg: #0c120e;
+  --jb-glass: rgba(22, 28, 24, 0.65);
+  --jb-sand: #d8c29d;
+  --jb-sand-bright: #f0e2ca;
+  --jb-sage: #8e9f93;
+  --jb-ember: #e07a2b;
+  --jb-ember-glow: rgba(224, 122, 43, 0.4);
+
+  --font-heading: var(--font-heading), "Cormorant Garamond", serif;
+  --font-body: var(--font-body), "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--jb-bg);
+  color: var(--jb-sand);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading, .font-serif {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background: var(--jb-sand);
+  color: var(--jb-bg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #090e0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2720;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--jb-sand);
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: rgba(22, 28, 24, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(216, 194, 157, 0.15);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(216, 194, 157, 0.4);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(224, 122, 43, 0.15);
+}
+
+.glass-nav {
+  background: rgba(12, 18, 14, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(216, 194, 157, 0.12);
+}
+
+/* Button & Helper Styling */
+.btn-sand {
+  background: linear-gradient(135deg, #d8c29d 0%, #b8a078 100%);
+  color: #0c120e;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 20px rgba(216, 194, 157, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-sand:hover {
+  background: linear-gradient(135deg, #f0e2ca 0%, #d8c29d 100%);
+  box-shadow: 0 8px 30px rgba(216, 194, 157, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline-sand {
+  border: 1px solid rgba(216, 194, 157, 0.3);
+  color: var(--jb-sand);
+  background: rgba(216, 194, 157, 0.05);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-sand:hover {
+  border-color: var(--jb-sand);
+  background: rgba(216, 194, 157, 0.15);
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 7s infinite ease-in-out;
+}
