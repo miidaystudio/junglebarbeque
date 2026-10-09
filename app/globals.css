@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --jb-bg: #0c120e;
-  --jb-glass: rgba(22, 28, 24, 0.65);
-  --jb-sand: #d8c29d;
-  --jb-sand-bright: #f0e2ca;
-  --jb-sage: #8e9f93;
-  --jb-ember: #e07a2b;
-  --jb-ember-glow: rgba(224, 122, 43, 0.4);
+  --color-cream: #FBF6EE;
+  --color-cream-dark: #F3EBDD;
+  --color-coral: #EB4823;
+  --color-coral-dark: #D43916;
+  --color-yellow: #FFD233;
+  --color-green: #68A843;
+  --color-blue: #1D5BB6;
+  --color-dark: #191817;
 
-  --font-heading: var(--font-heading), "Cormorant Garamond", serif;
-  --font-body: var(--font-body), "Plus Jakarta Sans", sans-serif;
+  --font-display: var(--font-dela), sans-serif;
+  --font-hand: var(--font-caveat), cursive;
+  --font-body: var(--font-outfit), var(--font-body), sans-serif;
 }
 
 * {
@@ -19,89 +21,36 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  background-color: var(--jb-bg);
-  color: var(--jb-sand);
+  background-color: var(--color-cream);
+  color: var(--color-dark);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .font-heading, .font-serif {
-  font-family: var(--font-heading);
-}
-
 ::selection {
-  background: var(--jb-sand);
-  color: var(--jb-bg);
+  background: var(--color-yellow);
+  color: var(--color-dark);
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090e0b;
+  background: var(--color-cream);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1c2720;
-  border-radius: 4px;
+  background: #E5DEC9;
+  border-radius: 9999px;
+  border: 2px solid var(--color-cream);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--jb-sand);
-}
-
-/* Glassmorphism Classes */
-.glass-card {
-  background: rgba(22, 28, 24, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(216, 194, 157, 0.15);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-card:hover {
-  border-color: rgba(216, 194, 157, 0.4);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(224, 122, 43, 0.15);
-}
-
-.glass-nav {
-  background: rgba(12, 18, 14, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(216, 194, 157, 0.12);
-}
-
-/* Button & Helper Styling */
-.btn-sand {
-  background: linear-gradient(135deg, #d8c29d 0%, #b8a078 100%);
-  color: #0c120e;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  box-shadow: 0 4px 20px rgba(216, 194, 157, 0.25);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-sand:hover {
-  background: linear-gradient(135deg, #f0e2ca 0%, #d8c29d 100%);
-  box-shadow: 0 8px 30px rgba(216, 194, 157, 0.4);
-  transform: translateY(-2px);
-}
-
-.btn-outline-sand {
-  border: 1px solid rgba(216, 194, 157, 0.3);
-  color: var(--jb-sand);
-  background: rgba(216, 194, 157, 0.05);
-  transition: all 0.3s ease;
-}
-
-.btn-outline-sand:hover {
-  border-color: var(--jb-sand);
-  background: rgba(216, 194, 157, 0.15);
-  color: #ffffff;
+  background: var(--color-coral);
 }
 
 /* Animations */
@@ -110,6 +59,82 @@ h1, h2, h3, h4, .font-heading, .font-serif {
   50% { transform: translateY(-10px) rotate(2deg); }
 }
 
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
 .animate-float-slow {
   animation: float-slow 7s infinite ease-in-out;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 2.5s ease-in-out infinite;
+}
+
+/* Custom Kooky Kind Helpers */
+.font-kooky-display {
+  font-family: var(--font-display);
+}
+
+.font-kooky-logo {
+  font-family: var(--font-logo);
+}
+
+.font-kooky-hand {
+  font-family: var(--font-hand);
+}
+
+.font-kooky-body {
+  font-family: var(--font-body);
+}
+
+.grid-paper {
+  background-color: #FEFCF6;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.washi-tape {
+  background: rgba(235, 72, 35, 0.82);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  clip-path: polygon(3% 0%, 97% 2%, 100% 98%, 0% 95%);
+}
+
+.custom-organic-mask {
+  clip-path: polygon(
+    0% 0%, 
+    100% 0%, 
+    100% 100%, 
+    8% 100%, 
+    6% 92%, 
+    12% 82%, 
+    7% 72%, 
+    11% 60%, 
+    6% 48%, 
+    13% 36%, 
+    7% 22%, 
+    12% 10%, 
+    3% 0%
+  );
 }

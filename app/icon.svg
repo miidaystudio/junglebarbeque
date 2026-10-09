@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Outer Cookie Base with thick cartoon border -->
+  <circle cx="32" cy="32" r="28" fill="#FFD233" stroke="#191817" stroke-width="4" />
+  
+  <!-- Warm Baked Texture Layer -->
+  <circle cx="32" cy="32" r="24" fill="#F59E0B" fill-opacity="0.25" />
+  
+  <!-- Chocolate Chips (Rich Dark Chunks) -->
+  <!-- Chip 1 -->
+  <path d="M 22 18 C 24 16, 28 17, 27 21 C 26 24, 21 24, 20 21 C 19 19, 20 18, 22 18 Z" fill="#191817" />
+  <circle cx="23" cy="19" r="1" fill="#FFFFFF" fill-opacity="0.5" />
+
+  <!-- Chip 2 -->
+  <path d="M 40 22 C 43 20, 47 23, 45 27 C 43 29, 38 28, 38 25 C 38 23, 39 22, 40 22 Z" fill="#191817" />
+  <circle cx="41" cy="23" r="1.2" fill="#FFFFFF" fill-opacity="0.5" />
+
+  <!-- Chip 3 (Center-right) -->
+  <path d="M 33 34 C 36 32, 40 35, 38 39 C 36 41, 31 40, 31 37 C 31 35, 32 34, 33 34 Z" fill="#191817" />
+  <circle cx="34" cy="35" r="1" fill="#FFFFFF" fill-opacity="0.5" />
+
+  <!-- Chip 4 (Bottom-left) -->
+  <path d="M 18 36 C 21 34, 25 37, 23 41 C 21 44, 16 42, 16 39 C 16 37, 17 36, 18 36 Z" fill="#191817" />
+  <circle cx="19" cy="37" r="1" fill="#FFFFFF" fill-opacity="0.5" />
+
+  <!-- Chip 5 (Bottom-right) -->
+  <path d="M 36 46 C 39 44, 43 47, 41 50 C 39 52, 34 52, 34 48 C 34 46, 35 46, 36 46 Z" fill="#191817" />
+
+  <!-- Playful Little Face / Smile (Zero Boring!) -->
+  <!-- Left eye wink -->
+  <path d="M 23 28 Q 26 26 29 28" fill="none" stroke="#191817" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Sparkle near top-right -->
+  <path d="M 49 11 L 51 16 L 56 18 L 51 20 L 49 25 L 47 20 L 42 18 L 47 16 Z" fill="#EB4823" stroke="#191817" stroke-width="1.5" />
+</svg>

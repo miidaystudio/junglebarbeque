@@ -1,28 +1,44 @@
 import "./globals.css";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Dela_Gothic_One, Caveat, Outfit, Plus_Jakarta_Sans } from "next/font/google";
 
-const cormorant = Cormorant_Garamond({
+const delaGothic = Dela_Gothic_One({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-heading",
+  weight: "400",
+  variable: "--font-dela",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-caveat",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-outfit",
 });
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-body",
 });
 
 export const metadata = {
-  title: "Jungle Barbeque | Luxury Botanical Dining & Live-Fire Charcoal Grill",
+  title: "KOOKY KIND | Cookies That Don't Follow The Recipe",
   description:
-    "Experience India's premier luxury botanical dining destination. Live-fire tabletop charcoal grills and an opulent 7-course buffet spread.",
+    "We bake playful, wildly delicious cookies with personality. Made with good ingredients and zero boring.",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${jakarta.variable}`}>
-      <body className="bg-[#0c120e] text-[#d8c29d] antialiased selection:bg-[#d8c29d] selection:text-[#0c120e]">
+    <html lang="en" className={`${delaGothic.variable} ${caveat.variable} ${outfit.variable} ${jakarta.variable}`}>
+      <body className="bg-[#FBF6EE] text-[#191817] font-sans antialiased selection:bg-[#FFD233] selection:text-[#191817]">
         {children}
       </body>
     </html>
